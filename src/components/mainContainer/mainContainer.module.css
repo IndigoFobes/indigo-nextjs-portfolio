@@ -1,0 +1,8 @@
+.title {
+  color: var(--titleColor);
+}
+
+.wrapper {
+  background: white;
+  margin-top: 20px;
+}

@@ -1,0 +1,9 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+  justify-content: center;
+  height: min-content;
+}
