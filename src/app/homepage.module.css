@@ -1,9 +1,17 @@
 .container {
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   place-self: center;
   justify-content: center;
   height: min-content;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }

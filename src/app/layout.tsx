@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Monoton } from "next/font/google";
+
+const monoton = Monoton({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal"],
+  variable: "--font-monoton",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${monoton.variable}`}>
         <div className="container">
           <div className={"wrapper"}>{children}</div>
         </div>

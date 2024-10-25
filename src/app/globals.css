@@ -3,8 +3,12 @@
 @tailwind utilities; */
 
 :root {
-  --bg: linear-gradient(120deg, #dd9bfb, #4175d6);
+  --bg: white;
+  --bgFun: linear-gradient(120deg, #dd9bfb, #4175d6);
   --titleColor: #fff494;
+  --accentOne: #4175d6;
+  --rounded: 20px;
+  --bgContent: #212121;
 }
 
 * {
@@ -20,7 +24,7 @@ body {
 }
 
 .container {
-  background: var(--bg);
+  background: var(--bgFun);
   min-height: 100vh;
 }
 
