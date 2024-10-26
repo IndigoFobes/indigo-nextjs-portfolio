@@ -1,5 +1,8 @@
 import MainContainer from "@/components/mainContainer/MainContainer";
+import Tabs from "@/components/tabs/Tabs";
 import Image from "next/image";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 import styles from "./homepage.module.css";
 
 export default function Home() {

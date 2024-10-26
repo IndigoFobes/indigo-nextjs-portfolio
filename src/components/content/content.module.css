@@ -1,0 +1,26 @@
+/* @import "simplebar.css"; */
+
+.container {
+  width: 100%;
+  background-color: var(--bgContent);
+  padding: 10px;
+}
+
+.simplebar {
+  height: 100%;
+  width: 100%;
+}
+
+/* .simplebar-scrollbar::before {
+  background-color: red;
+} */
+
+/* .simplebar-track.simplebar-vertical {
+  width: 200px !important;
+} */
+/* 
+.simplebar-wrapper {
+  width: 90%;
+  overflow-y: hidden;
+  max-height: 100%;
+} */

@@ -18,6 +18,7 @@
   border-radius: 50%;
   left: -200px;
   top: 35%;
+  z-index: 2;
 }
 
 .image {
@@ -43,6 +44,8 @@
   height: 640px;
   padding: 20px;
   padding-bottom: 40px;
+  box-shadow: var(--dropShadow);
+  z-index: 1;
 }
 
 .content {
@@ -73,6 +76,12 @@
   .subtitle {
     font-size: 36px;
   }
+
+  .imgContainer {
+    width: 300px;
+    height: 300px;
+    top: 40%;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -91,6 +100,13 @@
     margin-top: 0px;
     margin-bottom: 10px;
   }
+
+  .imgContainer {
+    width: 220px;
+    height: 220px;
+    top: 40%;
+    left: -120px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -102,6 +118,11 @@
 
   .title {
     font-size: 72px;
+  }
+
+  .imgContainer {
+    top: -230px;
+    left: calc(50% - 220px / 2);
   }
 }
 

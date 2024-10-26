@@ -1,0 +1,90 @@
+.container {
+  position: absolute;
+  right: 0px;
+  top: 170px;
+  display: flex;
+  align-self: center;
+}
+
+.wrapper {
+  /* display: flex;
+  flex-direction: column;
+  gap: 30px; */
+  position: relative;
+}
+
+.tab {
+  position: absolute;
+  background-color: var(--bg);
+  padding: 10px 20px 70px 20px;
+  transform: rotate(90deg);
+  border-radius: var(--rounded);
+  box-shadow: var(--dropShadow);
+  min-width: 120px;
+  text-align: center;
+  font-family: var(--font-code);
+  font-weight: 300;
+  font-size: 20px;
+  min-width: 150px;
+  min-height: 150px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.tab:nth-child(1) {
+  top: 30px;
+  right: -50px;
+}
+
+.tab:nth-child(2) {
+  top: 165px;
+  right: -50px;
+}
+
+.tab:nth-child(3) {
+  top: 300px;
+  right: -50px;
+}
+
+.tab:nth-child(1):hover {
+  right: -80px;
+}
+
+.tab:nth-child(2):hover {
+  right: -80px;
+}
+
+.tab:nth-child(3):hover {
+  right: -80px;
+}
+
+@media screen and (max-width: 1536px) {
+  .tab {
+    font-size: 16px;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-width: 120px;
+    min-height: 120px;
+  }
+
+  .tab:nth-child(1) {
+    top: 0px;
+    right: -40px;
+  }
+
+  .tab:nth-child(2) {
+    top: 110px;
+    right: -40px;
+  }
+
+  .tab:nth-child(3) {
+    top: 220px;
+    right: -40px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .tab {
+    font-size: 14px;
+  }
+}

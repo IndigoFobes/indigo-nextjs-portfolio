@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import Content from "../content/Content";
+import Tabs from "../tabs/Tabs";
 import styles from "./mainContainer.module.css";
 
 const MainContainer = () => {
@@ -21,8 +23,10 @@ const MainContainer = () => {
         <div className={styles.content}>
           {/* Component is dependent on what tab is selected */}
           {/* Probably will nee useState to determine which component to show... options will be portfolio, single project, about, contact */}
+          <Content />
         </div>
       </div>
+      <Tabs />
     </div>
   );
 };

@@ -1,0 +1,5 @@
+.container {
+  color: pink;
+  font-family: var(--font-code);
+  padding: 20px;
+}
