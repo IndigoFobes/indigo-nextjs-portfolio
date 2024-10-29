@@ -29,21 +29,19 @@
   min-height: 150px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  right: -50px;
 }
 
 .tab:nth-child(1) {
   top: 30px;
-  right: -50px;
 }
 
 .tab:nth-child(2) {
   top: 165px;
-  right: -50px;
 }
 
 .tab:nth-child(3) {
   top: 300px;
-  right: -50px;
 }
 
 .tab:nth-child(1):hover {
@@ -56,6 +54,11 @@
 
 .tab:nth-child(3):hover {
   right: -80px;
+}
+
+.active {
+  /* right: -55px !important; */
+  color: var(--accentOne);
 }
 
 @media screen and (max-width: 1536px) {
@@ -80,6 +83,10 @@
   .tab:nth-child(3) {
     top: 220px;
     right: -40px;
+  }
+
+  .active {
+    right: -30px;
   }
 }
 

@@ -1,17 +1,43 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./tabs.module.css";
 
-const Tabs = () => {
+const Tabs = ({ content, setContent }: { content: any; setContent: any }) => {
+  // When I click a tab, I want to set the state...
+  // this state will have to pass to Content
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.tab}>
+        <div
+          className={`${styles.tab} ${
+            content === "Portfolio" ? styles.active : ""
+          }`}
+          onClick={() => {
+            setContent("Portfolio");
+          }}
+        >
           <h4>portfolio</h4>
         </div>
-        <div className={styles.tab}>
+        <div
+          className={`${styles.tab} ${
+            content === "About" ? styles.active : ""
+          }`}
+          onClick={() => {
+            setContent("About");
+          }}
+        >
           <h4>about me</h4>
         </div>
-        <div className={styles.tab}>
+        <div
+          className={`${styles.tab} ${
+            content === "Contact" ? styles.active : ""
+          }`}
+          onClick={() => {
+            setContent("Contact");
+          }}
+        >
           <h4>contact</h4>
         </div>
       </div>

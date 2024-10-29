@@ -1,10 +1,16 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Content from "../content/Content";
 import Tabs from "../tabs/Tabs";
 import styles from "./mainContainer.module.css";
 
+// const handleCallback = (childData) => {};
+// Get content from Tabs and pass to Content
+
 const MainContainer = () => {
+  const [content, setContent] = useState("Portfolio");
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
@@ -23,10 +29,10 @@ const MainContainer = () => {
         <div className={styles.content}>
           {/* Component is dependent on what tab is selected */}
           {/* Probably will nee useState to determine which component to show... options will be portfolio, single project, about, contact */}
-          <Content />
+          <Content content={content} />
         </div>
       </div>
-      <Tabs />
+      <Tabs content={content} setContent={setContent} />
     </div>
   );
 };

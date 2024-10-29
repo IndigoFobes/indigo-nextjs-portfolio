@@ -1,5 +1,36 @@
 .container {
   color: pink;
   font-family: var(--font-code);
-  padding: 20px;
+  padding: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  color: var(--lightText);
+  gap: 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 10px 10px 10px 30px;
+  width: 98%;
+}
+
+:hover.project {
+  color: var(--accentTwo);
+  background-color: var(--bgContentDark);
+}
+
+.indent {
+  margin-left: 20px;
+}
+
+.projectText {
+  display: flex;
+  flex-direction: column;
 }
