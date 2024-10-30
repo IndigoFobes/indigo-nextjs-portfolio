@@ -28,7 +28,7 @@ const projects: Project[] = [
     id: 1,
     title: "indigoFobes",
     tech: ["Nextjs", "typescript"],
-    url: "www.jacob-millman.com",
+    url: "www.indigofobes.com",
     github: "www.jacob-millman.com",
     imageSrc: "/indigo-green-square.jpg",
     imageAlt: "Placeholder image.",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     id: 2,
     title: "jamesBlog",
     tech: ["Nextjs", "typescript"],
-    url: "www.jacob-millman.com",
+    url: "coming soon",
     github: "www.jacob-millman.com",
     imageSrc: "/indigo-green-square.jpg",
     imageAlt: "Placeholder image.",
@@ -45,49 +45,53 @@ const projects: Project[] = [
 ];
 
 const Portfolio = () => {
-  // console.log(`Projects: ${projects[0].title}`);
   const [open, setOpen] = useState(false);
-  const [currentProject, setCurrentProject] = useState(0);
-  const [activeProjectId, setActiveProjectId] = useState<number | null>(null);
+  const [clickedId, setClickedId] = useState<number | null>(null);
+  // var clickedProject;
+  // var clickedUrl: string;
+
+  const handleClick = (project: object) => {
+    // console.log(project.id);
+    // setCurrentProject(project);
+    setOpen(true);
+  };
 
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        {/* Need to get clickedUrl (and full clickedProject) value, but it's outside of the map function */}
         {open && (
           <Project
-            projects={projects}
-            currentProject={currentProject}
             setOpen={setOpen}
-            activeProjectId={activeProjectId}
-            setActiveProjectId={setActiveProjectId}
+            clickedId={clickedId}
+            projects={projects}
           />
         )}
 
-        {projects.map((project) => {
-          const techAsString = project.tech.join(", ");
-          const handleClick = (projectId: number) => {
-            setCurrentProject(project.id);
-            setActiveProjectId(project.id);
-            setOpen(true);
-            // console.log(`project: ${project}`);
-            console.log(`active project id: ${project.id}`);
-          };
+        {projects.map((singleProject) => {
+          const techAsString = singleProject.tech.join(", ");
 
           return (
             <div
-              key={project.id}
+              key={singleProject.id}
               className={styles.project}
               onClick={() => {
-                handleClick(project.id);
+                // clickedProject = JSON.stringify(singleProject);
+                setClickedId(singleProject.id);
+                console.log(`clicked project: ${singleProject.url}`);
+                console.log(`id: ${singleProject.id}`);
+                setOpen(true);
               }}
             >
               <span>{`>`}</span>
               <div className={styles.projectText}>
                 <span
                   className={styles.projectContent}
-                >{`${project.title} = {`}</span>
+                >{`${singleProject.title} = {`}</span>
                 <span className={styles.indent}>{`tech: ${techAsString}`}</span>
-                <span className={styles.indent}>{`url: ${project.url}`}</span>
+                <span
+                  className={styles.indent}
+                >{`url: ${singleProject.url}`}</span>
                 <span>{`}`}</span>
               </div>
             </div>

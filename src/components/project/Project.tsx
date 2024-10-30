@@ -1,42 +1,40 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styles from "./project.module.css";
 
 const Project = ({
-  projects,
-  currentProject,
   setOpen,
-  activeProjectId,
-  setActiveProjectId,
+  clickedId,
+  projects,
 }: {
-  projects: any;
-  currentProject: any;
   setOpen: any;
-  activeProjectId: any;
-  setActiveProjectId: any;
+  clickedId: any;
+  projects: any;
 }) => {
-  // Get project content from Portfolio
-  // Get specific project... Whcih one is selected?
-  let selectedProject = projects[activeProjectId];
-  const handleClick = () => {
-    setActiveProjectId(null);
-    setOpen(false);
-  };
+  var clickedProject = projects[clickedId];
+  //   console.log(`project: ${activeProject}`);
 
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        {/* <h2
+          onClick={() => {
+            console.log(clickedProject);
+          }}
+        >{`Testing... this project is ${clickedId}`}</h2> */}
         <Link
-          href={`https://${selectedProject.url}`}
+          href={`https://${clickedProject.url}`}
           target="_blank"
           className={styles.url}
         >
-          <h3>{selectedProject.url}</h3>
+          <h3>{clickedProject.url}</h3>
         </Link>
         <div className={styles.comments}>
           <Link
-            href={`https://${selectedProject.github}`}
+            href={`https://${clickedProject.github}`}
             className={styles.github}
           >
             <span>{`// view repo on github`}</span>
@@ -47,19 +45,19 @@ const Project = ({
         </div>
 
         <Link
-          href={`https://${selectedProject.url}`}
+          href={`https://${clickedProject.url}`}
           className={styles.imgContainer}
           target="_blank"
         >
           <Image
-            src={selectedProject.imageSrc}
-            alt={selectedProject.imageAlt}
+            src={clickedProject.imageSrc}
+            alt={clickedProject.imageAlt}
             fill
             className={styles.image}
           />
           <h4 className={styles.viewText}>view live!</h4>
         </Link>
-        <Link href={`https://${selectedProject.github}`} target="_blank">
+        <Link href={`https://${clickedProject.github}`} target="_blank">
           <Image
             src="/github-icon-grey.png"
             alt="Github icon"
@@ -71,6 +69,15 @@ const Project = ({
         <span
           className={styles.exit}
           onClick={() => {
+            setOpen(false);
+          }}
+        >
+          x
+        </span>
+        <span
+          className={styles.exit}
+          onClick={(e) => {
+            e.preventDefault();
             setOpen(false);
           }}
         >
