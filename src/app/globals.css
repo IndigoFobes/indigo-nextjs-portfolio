@@ -14,6 +14,7 @@
   --dropShadow: rgba(33, 33, 33, 0.35) 0px 10px 30px 0px;
   --lightText: #f5f5f5;
   --bgContentDark: #141414;
+  --comment: #d9d9d9;
 }
 
 * {

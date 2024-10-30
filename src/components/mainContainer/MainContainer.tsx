@@ -22,7 +22,7 @@ const MainContainer = () => {
           className={styles.image}
         />
       </div>
-      <h1 className={styles.title}>INDIGO FOBES</h1>
+      <h1 className={styles.title}>{`INDIGO FOBES`}</h1>
       <div className={styles.wrapper}>
         <h2 className={styles.subtitle}>WEB DEV PORTFOLIO</h2>
         {/* content component */}
