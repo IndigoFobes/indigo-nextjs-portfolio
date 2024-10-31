@@ -4,6 +4,7 @@
   width: 100%;
   background-color: var(--bgContent);
   padding: 10px;
+  height: 100%;
 }
 
 .simplebar {

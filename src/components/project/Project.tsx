@@ -20,52 +20,71 @@ const Project = ({
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        {/* <h2
-          onClick={() => {
-            console.log(clickedProject);
-          }}
-        >{`Testing... this project is ${clickedId}`}</h2> */}
-        <Link
-          href={`https://${clickedProject.url}`}
-          target="_blank"
-          className={styles.url}
-        >
-          <h3>{clickedProject.url}</h3>
-        </Link>
+        {clickedProject.url ? (
+          <Link
+            href={`https://${clickedProject.url}`}
+            target="_blank"
+            className={styles.url}
+          >
+            <h3>{clickedProject.url}</h3>
+          </Link>
+        ) : (
+          <span
+            className={styles.title}
+          >{`${clickedProject.title}... url coming soon!`}</span>
+        )}
+
         <div className={styles.comments}>
           <Link
             href={`https://${clickedProject.github}`}
             className={styles.github}
+            target="_blank"
           >
-            <span>{`// view repo on github`}</span>
+            {clickedProject.github && <span>{`// view repo on github`}</span>}
           </Link>
-          <span
-            className={styles.comment}
-          >{`// or click below to view live!`}</span>
+          <span>{`// click below to view live!`}</span>
         </div>
+        {clickedProject.url ? (
+          <Link
+            href={`https://${clickedProject.url}`}
+            className={styles.imgContainer}
+            target="_blank"
+          >
+            <Image
+              src={clickedProject.imageSrc}
+              alt={clickedProject.imageAlt}
+              fill
+              className={styles.image}
+            />
+            <h4 className={styles.viewText}>view live!</h4>
+          </Link>
+        ) : (
+          <div className={styles.imgContainer}>
+            <Image
+              src={clickedProject.imageSrc}
+              alt={clickedProject.imageAlt}
+              fill
+              className={styles.imageNoUrl}
+            />
+          </div>
+        )}
 
-        <Link
-          href={`https://${clickedProject.url}`}
-          className={styles.imgContainer}
-          target="_blank"
-        >
-          <Image
-            src={clickedProject.imageSrc}
-            alt={clickedProject.imageAlt}
-            fill
-            className={styles.image}
-          />
-          <h4 className={styles.viewText}>view live!</h4>
-        </Link>
-        <Link href={`https://${clickedProject.github}`} target="_blank">
-          <Image
-            src="/github-icon-grey.png"
-            alt="Github icon"
-            width="50"
-            height="50"
-            className={styles.icon}
-          />
-        </Link>
+        <p className={styles.desc}>
+          <span>{`// `}</span>
+          {clickedProject.desc}
+        </p>
+        {clickedProject.github && (
+          <Link href={`https://${clickedProject.github}`} target="_blank">
+            <Image
+              src="/github-icon-grey.png"
+              alt="Github icon"
+              width="50"
+              height="50"
+              className={styles.icon}
+            />
+          </Link>
+        )}
+
         <span
           className={styles.exit}
           onClick={() => {
