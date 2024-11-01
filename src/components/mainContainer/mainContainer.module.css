@@ -143,22 +143,36 @@
   }
 
   .title {
-    font-size: 50px;
+    font-size: 46px;
   }
 
   .subtitle {
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
     margin-left: 0px;
+  }
+
+  .imgContainer {
+    height: 175px;
+    width: 175px;
+    left: calc(50% - 175px / 2);
+    top: -190px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .title {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .subtitle {
-    font-size: 24px;
+    font-size: 20px;
+  }
+
+  .imgContainer {
+    height: 175px;
+    width: 175px;
+    left: calc(50% - 175px / 2);
+    top: -190px;
   }
 }

@@ -7,9 +7,6 @@
 }
 
 .wrapper {
-  /* display: flex;
-  flex-direction: column;
-  gap: 30px; */
   position: relative;
 }
 
@@ -110,12 +107,12 @@
 
 @media screen and (max-width: 768px) {
   .container {
-    right: calc(50% - 500px / 2);
+    right: calc(50% - 300px / 2);
     top: calc(100% - 80px);
   }
 
   .wrapper {
-    width: 500px;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -127,6 +124,7 @@
     margin-right: -12px;
     padding-top: 90px;
     padding-bottom: 15px;
+    min-width: 110px;
   }
 
   .tab:nth-child(1) {
@@ -157,5 +155,16 @@
   .tab:nth-child(3):hover {
     transform: translateY(15px);
     right: 0px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    right: calc(50% - 260px / 2);
+  }
+
+  .tab {
+    font-size: 12px;
+    min-width: 100px;
   }
 }

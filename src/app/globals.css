@@ -23,8 +23,15 @@
   box-sizing: border-box;
 }
 
+/* html {
+  min-width: 100vw;
+  min-height: 100vh;
+} */
+
 body {
   max-width: 100vw;
+  min-width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
   font-family: var(--font-monoton);
 }
@@ -32,6 +39,7 @@ body {
 .container {
   background: var(--bgFun);
   min-height: 100vh;
+  min-width: 100vw !important;
 }
 
 .wrapper {

@@ -19,9 +19,17 @@
 @media screen and (max-width: 768px) {
   .container {
     width: 97%;
+    place-self: end;
+    padding-bottom: 100px;
   }
 
   .wrapper {
     padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding-bottom: 40px;
   }
 }
