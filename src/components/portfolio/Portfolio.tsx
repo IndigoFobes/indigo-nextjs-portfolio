@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Project from "../project/Project";
+import SingleProjectComponent from "../project/Project";
 import styles from "./portfolio.module.css";
 
 export interface Project {
+  [index: number]: string | number | Array<string> | undefined | {};
+  // [key: string]: any;
   title: string;
   tech: string[];
   url?: string;
@@ -70,22 +72,16 @@ const projects: Project[] = [
 
 const Portfolio = () => {
   const [open, setOpen] = useState(false);
-  const [clickedId, setClickedId] = useState<number | null>(null);
+  const [clickedId, setClickedId] = useState(0);
   // var clickedProject;
   // var clickedUrl: string;
-
-  const handleClick = (project: object) => {
-    // console.log(project.id);
-    // setCurrentProject(project);
-    setOpen(true);
-  };
 
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         {/* Need to get clickedUrl (and full clickedProject) value, but it's outside of the map function */}
         {open && (
-          <Project
+          <SingleProjectComponent
             setOpen={setOpen}
             clickedId={clickedId}
             projects={projects}

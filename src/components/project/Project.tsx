@@ -1,22 +1,26 @@
 "use client";
 
+// import { Project } from "next/dist/build/swc/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Project } from "../portfolio/Portfolio";
 import styles from "./project.module.css";
 
-const Project = ({
+const SingleProjectComponent = ({
   setOpen,
   clickedId,
   projects,
 }: {
-  setOpen: any;
-  clickedId: any;
-  projects: any;
+  setOpen: Function;
+  clickedId: number;
+  projects: Array<Project>;
 }) => {
   var clickedProject = projects[clickedId];
-  //   console.log(`project: ${activeProject}`);
-
+  var stringed = JSON.stringify(projects);
+  console.log(`STRINGED: ${stringed}`);
+  console.log(`clicked project: ${projects[clickedId].url}`);
+  // console.log(`clicked project: ${stringed[clickedId]}`);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -103,4 +107,4 @@ const Project = ({
   );
 };
 
-export default Project;
+export default SingleProjectComponent;

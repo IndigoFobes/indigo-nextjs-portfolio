@@ -6,9 +6,6 @@ import Content from "../content/Content";
 import Tabs from "../tabs/Tabs";
 import styles from "./mainContainer.module.css";
 
-// const handleCallback = (childData) => {};
-// Get content from Tabs and pass to Content
-
 const MainContainer = () => {
   const [content, setContent] = useState("Portfolio");
   return (

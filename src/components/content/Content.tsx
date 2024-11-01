@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Portfolio from "../portfolio/Portfolio";
 import About from "../about/About";
 import Contact from "../contact/Contact";

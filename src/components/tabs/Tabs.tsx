@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import styles from "./tabs.module.css";
 
 const Tabs = ({ content, setContent }: { content: any; setContent: any }) => {
