@@ -94,4 +94,68 @@
   .tab {
     font-size: 14px;
   }
+
+  .tab:nth-child(1):hover {
+    right: -60px;
+  }
+
+  .tab:nth-child(2):hover {
+    right: -60px;
+  }
+
+  .tab:nth-child(3):hover {
+    right: -60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    right: calc(50% - 500px / 2);
+    top: calc(100% - 80px);
+  }
+
+  .wrapper {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .tab {
+    transform: rotate(0deg);
+    position: relative;
+    margin-right: -12px;
+    padding-top: 90px;
+    padding-bottom: 15px;
+  }
+
+  .tab:nth-child(1) {
+    top: 0px;
+    left: 0px;
+    right: auto;
+  }
+
+  .tab:nth-child(2) {
+    top: 0px;
+    right: 0px;
+  }
+
+  .tab:nth-child(3) {
+    top: 0px;
+    right: 0px;
+  }
+
+  .tab:nth-child(1):hover {
+    transform: translateY(15px);
+  }
+
+  .tab:nth-child(2):hover {
+    transform: translateY(15px);
+    right: 0px;
+  }
+
+  .tab:nth-child(3):hover {
+    transform: translateY(15px);
+    right: 0px;
+  }
 }

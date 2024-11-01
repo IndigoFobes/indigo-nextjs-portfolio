@@ -15,3 +15,13 @@
   justify-content: center;
   align-content: center;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 97%;
+  }
+
+  .wrapper {
+    padding-right: 0px;
+  }
+}

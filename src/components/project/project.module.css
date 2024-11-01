@@ -142,3 +142,23 @@
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .wrapper {
+    padding: 10px;
+  }
+
+  .url {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    width: 90%;
+  }
+
+  .imgContainer {
+    min-width: auto;
+  }
+}
