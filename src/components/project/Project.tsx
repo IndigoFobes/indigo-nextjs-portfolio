@@ -20,6 +20,7 @@ const Project = ({
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        {/* URL */}
         {clickedProject.url ? (
           <Link
             href={`https://${clickedProject.url}`}
@@ -33,7 +34,7 @@ const Project = ({
             className={styles.title}
           >{`${clickedProject.title}... url coming soon!`}</span>
         )}
-
+        {/* FIRST TWO COMMENTS: GITHUB AND CLICK BELOW */}
         <div className={styles.comments}>
           <Link
             href={`https://${clickedProject.github}`}
@@ -45,6 +46,7 @@ const Project = ({
           <span>{`// click below to view live!`}</span>
         </div>
         {clickedProject.url ? (
+          // IMAGE WITH URL
           <Link
             href={`https://${clickedProject.url}`}
             className={styles.imgContainer}
@@ -59,6 +61,7 @@ const Project = ({
             <h4 className={styles.viewText}>view live!</h4>
           </Link>
         ) : (
+          // IMAGE WITHOUT URL
           <div className={styles.imgContainer}>
             <Image
               src={clickedProject.imageSrc}
@@ -68,11 +71,12 @@ const Project = ({
             />
           </div>
         )}
-
+        {/* 3RD COMMENT: DESCRIPTION*/}
         <p className={styles.desc}>
           <span>{`// `}</span>
           {clickedProject.desc}
         </p>
+        {/* GITHUB ICON WITH LINK */}
         {clickedProject.github && (
           <Link href={`https://${clickedProject.github}`} target="_blank">
             <Image
@@ -84,15 +88,7 @@ const Project = ({
             />
           </Link>
         )}
-
-        <span
-          className={styles.exit}
-          onClick={() => {
-            setOpen(false);
-          }}
-        >
-          x
-        </span>
+        {/* CLOSE BUTTON */}
         <span
           className={styles.exit}
           onClick={(e) => {

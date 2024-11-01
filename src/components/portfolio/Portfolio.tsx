@@ -113,14 +113,13 @@ const Portfolio = () => {
                   className={styles.projectContent}
                 >{`${singleProject.title} = {`}</span>
                 <span className={styles.indent}>{`tech: ${techAsString}`}</span>
+
                 {singleProject.url && (
-                  <div>
-                    <span
-                      className={styles.indent}
-                    >{`url: ${singleProject.url}`}</span>
-                    <span>{`}`}</span>
-                  </div>
+                  <span
+                    className={styles.indent}
+                  >{`url: ${singleProject.url}`}</span>
                 )}
+                <span>{`}`}</span>
               </div>
             </div>
           );
