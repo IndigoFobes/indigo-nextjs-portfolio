@@ -12,7 +12,7 @@ const MainContainer = () => {
     <div className={styles.container}>
       <div className={styles.imgContainer}>
         <Image
-          src="/indigo-green-square.jpg"
+          src="/Indigo-green-square.jpg"
           alt="Indigo smiling with green shirt."
           width="200"
           height="200"
