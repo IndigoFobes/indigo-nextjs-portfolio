@@ -3,7 +3,7 @@
 // import { Project } from "next/dist/build/swc/types";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { Dispatch } from "react";
 import { Project } from "../portfolio/Portfolio";
 import styles from "./project.module.css";
 
@@ -12,13 +12,13 @@ const SingleProjectComponent = ({
   clickedId,
   projects,
 }: {
-  setOpen: Function;
+  setOpen: Dispatch<React.SetStateAction<boolean>>;
   clickedId: number;
   projects: Array<Project>;
 }) => {
-  var clickedProject = projects[clickedId];
-  var stringed = JSON.stringify(projects);
-  console.log(`STRINGED: ${stringed}`);
+  const clickedProject = projects[clickedId];
+  // const stringed = JSON.stringify(projects);
+  // console.log(`STRINGED: ${stringed}`);
   console.log(`clicked project: ${projects[clickedId].url}`);
   // console.log(`clicked project: ${stringed[clickedId]}`);
   return (

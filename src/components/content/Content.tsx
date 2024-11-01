@@ -9,7 +9,7 @@ import styles from "./content.module.css";
 // import ResizeObserver from "resize-observer-polyfill";
 // window.ResizeObserver = ResizeObserver;
 
-const Content = ({ content }: { content: any }) => {
+const Content = ({ content }: { content: string }) => {
   // I need to get content in here from Tabs
   return (
     <div className={styles.container}>

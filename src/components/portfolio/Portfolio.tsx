@@ -5,7 +5,7 @@ import SingleProjectComponent from "../project/Project";
 import styles from "./portfolio.module.css";
 
 export interface Project {
-  [index: number]: string | number | Array<string> | undefined | {};
+  [index: number]: string | number | Array<string> | undefined;
   // [key: string]: any;
   title: string;
   tech: string[];
@@ -71,7 +71,7 @@ const projects: Project[] = [
 ];
 
 const Portfolio = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
   const [clickedId, setClickedId] = useState(0);
   // var clickedProject;
   // var clickedUrl: string;

@@ -1,7 +1,13 @@
-import React from "react";
+import React, { Dispatch } from "react";
 import styles from "./tabs.module.css";
 
-const Tabs = ({ content, setContent }: { content: any; setContent: any }) => {
+const Tabs = ({
+  content,
+  setContent,
+}: {
+  content: string;
+  setContent: Dispatch<React.SetStateAction<string>>;
+}) => {
   // When I click a tab, I want to set the state...
   // this state will have to pass to Content
 
