@@ -62,3 +62,15 @@
     word-wrap: break-word;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .indent {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  .indent {
+    max-width: 180px;
+  }
+}
